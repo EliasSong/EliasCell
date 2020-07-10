@@ -1,0 +1,8 @@
+@import "./normalize.css";
+html{
+  background-color: #000000;
+}
+body{
+  padding: 0;
+  margin: 0;
+}

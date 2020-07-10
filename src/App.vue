@@ -1,19 +1,31 @@
 <template>
   <div id="app">
-    <div class="btn btn-secondary">click me</div>
+    <BlogNavbar ref="navbar"></BlogNavbar>
+    <keep-alive>
+      <router-view @enterSignal="enterHomePage"></router-view>
+    </keep-alive>
+
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App',
-  components: {
-  }
+  import BlogNavbar from "./components/navbar";
+  export default {
+    name: 'App',
+    components: {
+      BlogNavbar,
+    },
+    methods:{
+      enterHomePage(){
+        this.$refs.navbar.setCurrentPath();
+      }
+    }
 }
 </script>
 
 <style>
-#app {
-
-}
+  @import "assets/css/base.css";
+  #app{
+    background-color: #000000;
+  }
 </style>
