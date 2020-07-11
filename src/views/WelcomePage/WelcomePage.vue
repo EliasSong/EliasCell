@@ -4,7 +4,7 @@
       <div class="jumbotron">
         <p class="lead">您好！请折返罢，这里除了我，什么都没有。</p>
         <hr class="my-4">
-        <div class="btn btn-danger btn-lg" @click="enterBtnClick">仍要前往<i class="fas fa-forward"></i></div>
+        <a class="btn btn-danger btn-lg"  href="/home">仍要前往<i class="fas fa-forward"></i></a>
       </div>
     </div>
 
@@ -20,10 +20,7 @@
       }
     },
     methods:{
-      enterBtnClick(){
-        this.$router.push("/home")
-        this.$emit("enterSignal")
-      }
+
     },
     deactivated() {
 

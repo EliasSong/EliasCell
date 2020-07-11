@@ -2,23 +2,23 @@
   <div id="app">
     <BlogNavbar ref="navbar"></BlogNavbar>
     <keep-alive>
-      <router-view @enterSignal="enterHomePage"></router-view>
+      <router-view ></router-view>
     </keep-alive>
-
+    <BlogCopyright></BlogCopyright>
   </div>
 </template>
 
 <script>
   import BlogNavbar from "./components/navbar";
+  import BlogCopyright from "./components/copyright";
   export default {
     name: 'App',
     components: {
       BlogNavbar,
+      BlogCopyright
     },
     methods:{
-      enterHomePage(){
-        this.$refs.navbar.setCurrentPath();
-      }
+
     }
 }
 </script>
@@ -26,6 +26,7 @@
 <style>
   @import "assets/css/base.css";
   #app{
-    background-color: #000000;
+    background-color: #030303;
   }
+
 </style>

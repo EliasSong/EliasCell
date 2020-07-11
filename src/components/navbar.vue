@@ -1,20 +1,16 @@
 <template>
   <div class="blognavbar">
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
           <a class="navbar-brand" href="/">
             <i class="fas fa-blog fa-2x"></i>
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="navbar-toggler" id="navBtn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
+          </div>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <div class="nav-link" :class="{'active':currentPath === '/home'}" @click="navItemClick('/home')">Home <span class="sr-only">(current)</span></div>
-              </li>
-              <li class="nav-item">
-                <div class="nav-link" :class="{'active':currentPath === '/bubble'}" @click="navItemClick('/bubble')">Bubble <span class="sr-only">(current)</span></div>
               </li>
               <li class="nav-item">
                 <div class="nav-link" :class="{'active':currentPath === '/blog'}" @click="navItemClick('/blog')">Blog <span class="sr-only">(current)</span></div>
@@ -27,7 +23,6 @@
               </li>
             </ul>
           </div>
-        </div>
       </nav>
   </div>
 </template>
@@ -37,6 +32,9 @@
     name: "navbar",
     methods:{
       navItemClick(path){
+        if(document.body.clientWidth<990){
+          document.querySelector("#navBtn").click();
+        }
         if(this.currentPath !== path){
           this.$router.push(path);
           this.currentPath = path;
@@ -48,8 +46,11 @@
     },
     data(){
       return {
-        currentPath:""
+        currentPath: window.location.pathname,
       }
+    },
+    created() {
+      console.log(this.currentPath);
     }
   }
 

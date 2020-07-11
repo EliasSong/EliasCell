@@ -1,15 +1,8 @@
 <template>
-  <div class="home">
-    <div class="jumbotron jumbotron-fluid homejubotron text-white">
-      <div class="container">
-        <h1 class="display-4">欢迎来到Elias Cell</h1>
-        <hr class="my-4">
-        <p class="lead">首先献上我诚挚的问候，这里只有一些日常记录，学习，感想，以及碎碎念，如若不是感兴趣者，请离开吧。</p>
-      </div>
-    </div>
+  <div class="blog">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8  col-md-8  col-sm-12 col-xs-12">
+        <div class="col-lg-8 offset-lg-1 col-md-8 offset-md-1 col-sm-12 col-xs-12">
           <h1>我是blog</h1>
           <ul>
             <li>01</li>
@@ -314,40 +307,19 @@
             <li>300</li>
           </ul>
         </div>
-        <div class="col-lg-4  col-md-4  col-sm-12 col-xs-12 ">
-          <HomeAboutme></HomeAboutme>
-        </div>
+        <div class="col-lg-3 ">我是about</div>
       </div>
     </div>
-
   </div>
+
 </template>
 
 <script>
-  import HomeAboutme from "./ChildrenComponents/aboutme";
   export default {
-    name: "Home",
-    components:{
-      HomeAboutme,
-    }
+    name: "blog"
   }
 </script>
 
 <style scoped>
- .home{
-   margin-top: 68px;
-   color: #eeeeee;
- }
-  .homejubotron{
-    background-image: url("../../assets/image/Home/HomeBackgroundImg.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
- .homejubotron hr{
-   border-style: solid;
-   height: 1px;
-   background-color: #fff;
- }
 
 </style>
