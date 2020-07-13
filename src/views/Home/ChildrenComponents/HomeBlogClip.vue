@@ -3,9 +3,7 @@
     <div class="card">
       <h5 class="card-header">Blog <a class="more" href="/home">More <i class="fas fa-angle-double-right"></i></a></h5>
       <div class="card-body">
-        <HomeBlogClipItem></HomeBlogClipItem>
-        <HomeBlogClipItem></HomeBlogClipItem>
-        <HomeBlogClipItem></HomeBlogClipItem>
+        <HomeBlogClipItem v-for="(item,index) in homeBlogList" :key="index" :blog-data="item"></HomeBlogClipItem>
       </div>
 
     </div>
@@ -16,6 +14,14 @@
   import HomeBlogClipItem from "./HomeBlogClipItem";
   export default {
     name: "HomeBlogClip",
+    props:{
+      homeBlogList:{
+        type:Array,
+        default(){
+          return []
+        }
+      }
+    },
     components:{
       HomeBlogClipItem,
     }

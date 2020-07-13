@@ -10,7 +10,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8  col-md-8  col-sm-12 col-xs-12">
-          <HomeBlogClip></HomeBlogClip>
+          <HomeBlogClip :home-blog-list="homeBlogList"></HomeBlogClip>
           <HomeAlbumClip></HomeAlbumClip>
         </div>
         <div class="col-lg-4  col-md-4  col-sm-12 col-xs-12 ">
@@ -28,13 +28,13 @@
   import HomeBlogClip from "./ChildrenComponents/HomeBlogClip";
   import HomeAlbumClip from "./ChildrenComponents/HomeAlbumClip";
   import HomeAboutme from "./ChildrenComponents/aboutme";
-  import {getBlog} from "../../network/home";
+  import {getHomeBlogData} from "../../network/home";
 
   export default {
     name: "Home",
     data(){
       return{
-        homeBlogClipList:[]
+        homeBlogList:[]
       }
     },
     components:{
@@ -43,11 +43,17 @@
       HomeBlogClip,
       HomeAlbumClip
     },
+    methods:{
+
+
+
+    },
     created() {
-      getBlog().then(res => {
+      getHomeBlogData().then(res => {
         console.log(res);
+        this.homeBlogList = res.data
       })
-    }
+    },
   }
 </script>
 

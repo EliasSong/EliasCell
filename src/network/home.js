@@ -1,6 +1,6 @@
 import {request} from "./request";
 
-export function getBlog(){
+export function getHomeBlogData(){
   return request({
     url:"/blog",
     method:"GET"
