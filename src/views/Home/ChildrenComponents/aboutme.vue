@@ -30,7 +30,7 @@
   hr{
     border-style: solid;
     height: 1px;
-    background-color: #fff;
+    background-color: #ffffff;
   }
 
 

@@ -4,7 +4,7 @@
       <div class="jumbotron">
         <p class="lead">您好！请折返罢，这里除了我，什么都没有。</p>
         <hr class="my-4">
-        <a class="btn btn-danger btn-lg"  href="/home">仍要前往<i class="fas fa-forward"></i></a>
+        <a class="btn btn-danger btn-lg enter" href="/home">仍然前往 <i class="fas fa-angle-double-right"></i></a>
       </div>
     </div>
 
@@ -42,16 +42,16 @@
   .jumbotron{
     min-width: 320px;
     background-color: rgb(28,28,29);
-    color:#fff;
+    color:#ffffff;
   }
   hr{
     border-style: solid;
     height: 1px;
     background-color: #fff;
   }
-  .btn>i{
-    margin-left: 8px;
-  }
+
+
+
 
 
 </style>
