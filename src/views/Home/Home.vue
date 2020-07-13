@@ -28,13 +28,25 @@
   import HomeBlogClip from "./ChildrenComponents/HomeBlogClip";
   import HomeAlbumClip from "./ChildrenComponents/HomeAlbumClip";
   import HomeAboutme from "./ChildrenComponents/aboutme";
+  import {getBlog} from "../../network/home";
+
   export default {
     name: "Home",
+    data(){
+      return{
+        homeBlogClipList:[]
+      }
+    },
     components:{
       HomeAboutme,
       HomeCopyright,
       HomeBlogClip,
       HomeAlbumClip
+    },
+    created() {
+      getBlog().then(res => {
+        console.log(res);
+      })
     }
   }
 </script>
