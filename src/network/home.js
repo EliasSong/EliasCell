@@ -7,13 +7,13 @@ export function getHomeBlogData(){
   })
 }
 
-export function getHomeGoods(type,page){
-  return request({
-    url: "/home/data",
-    method: "GET",
-    params: {
-      type,
-      page
-    }
-  });
-}
+// export function getHomeGoods(type,page){
+//   return request({
+//     url: "/home/data",
+//     method: "GET",
+//     params: {
+//       type,
+//       page
+//     }
+//   });
+// }

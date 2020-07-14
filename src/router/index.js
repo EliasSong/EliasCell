@@ -8,7 +8,9 @@ const Home = () => import("../views/Home/Home")
 
 const Bubble = () => import("../views/Bubble/bubble")
 
-const Blog = () => import("../views/Blog/blog")
+const BlogMainPage = () => import("../views/Blog/BlogMainPage")
+
+const BlogDetailPage = () => import("../views/Blog/BlogDetailPage")
 
 
 
@@ -28,7 +30,11 @@ const routes=[
   },
   {
     path:"/blog",
-    component:Blog
+    component:BlogMainPage
+  },
+  {
+    path:"/blog/:blogId",
+    component:BlogDetailPage
   }
 ]
 

@@ -1,6 +1,7 @@
 const webpack = require("webpack");
 
 module.exports = {
+
   configureWebpack: {
     plugins: [
       new webpack.ProvidePlugin({
@@ -10,5 +11,7 @@ module.exports = {
         Popper: ["popper.js", "default"]
       })
     ]
-  }
+  },
+
 };
+

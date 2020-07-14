@@ -50,8 +50,9 @@
     },
     created() {
       getHomeBlogData().then(res => {
-        console.log(res);
-        this.homeBlogList = res.data
+
+        this.homeBlogList = res
+
       })
     },
   }

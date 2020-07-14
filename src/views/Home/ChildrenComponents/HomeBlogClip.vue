@@ -3,7 +3,7 @@
     <div class="card">
       <h5 class="card-header">Blog <a class="more" href="/home">More <i class="fas fa-angle-double-right"></i></a></h5>
       <div class="card-body">
-        <HomeBlogClipItem v-for="(item,index) in homeBlogList" :key="index" :blog-data="item"></HomeBlogClipItem>
+        <HomeBlogClipItem v-for="(item,index) in homeBlogList" :key="index" :blog-data="item" ></HomeBlogClipItem>
       </div>
 
     </div>
@@ -24,7 +24,8 @@
     },
     components:{
       HomeBlogClipItem,
-    }
+    },
+
   }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <BlogNavbar ref="navbar"></BlogNavbar>
-    <keep-alive>
+    <keep-alive exclude="BlogDetailPage">
       <router-view ></router-view>
     </keep-alive>
   </div>

@@ -52,7 +52,6 @@
       }
     },
     created() {
-      console.log(this.currentPath);
     }
   }
 

@@ -1,6 +1,6 @@
 <template>
-  <div class="item">
-    <a href="/home"><h1>{{blogData.blogTitle}}</h1></a>
+  <div class="item" >
+    <h1 @click="changeToBlogDetail(blogData._id)">{{blogData.blogTitle}}</h1>
     <p>{{blogData.blogContent}}</p>
     <p class="lead">{{blogData.blogTime}}</p>
     <hr class="my-4">
@@ -17,6 +17,14 @@
           return {}
         }
       }
+    },
+    methods:{
+      changeToBlogDetail(id){
+        this.$router.push("/blog/"+id)
+      }
+    },
+    created() {
+
     }
   }
 </script>
@@ -32,7 +40,7 @@
   .item p{
     color: rgb(152,152,158)
   }
-  .item a:hover{
+  .item h1:hover{
     color:#4682b4;
     text-decoration:none;
   }
