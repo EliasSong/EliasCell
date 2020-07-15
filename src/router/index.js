@@ -12,7 +12,9 @@ const BlogMainPage = () => import("../views/Blog/BlogMainPage")
 
 const BlogDetailPage = () => import("../views/Blog/BlogDetailPage")
 
+const BlogManagePage = () => import("../views/Blog/BlogManagePage")
 
+const BlogCreatePage =() => import("../views/BackManage/BlogCreatePage")
 
 
 const routes=[
@@ -35,6 +37,14 @@ const routes=[
   {
     path:"/blog/:blogId",
     component:BlogDetailPage
+  },
+  {
+    path: "/blog/:blogId/manage",
+    component:BlogManagePage,
+  },
+  {
+    path: "/manage/blog/create",
+    component:BlogCreatePage
   }
 ]
 

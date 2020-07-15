@@ -1,7 +1,7 @@
 <template>
   <div class="item" >
     <h1 @click="changeToBlogDetail(blogData._id)">{{blogData.blogTitle}}</h1>
-    <p>{{blogData.blogContent}}</p>
+    <p>{{blogData.blogDesc}}</p>
     <p class="lead">{{blogData.blogTime}}</p>
     <hr class="my-4">
   </div>

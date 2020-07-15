@@ -15,7 +15,7 @@
     name: 'App',
     components: {
       BlogNavbar,
-      MusicpPlayer
+      // MusicpPlayer
     },
     methods:{
 

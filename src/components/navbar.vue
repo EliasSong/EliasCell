@@ -51,6 +51,7 @@
         currentPath: window.location.pathname,
       }
     },
+
     created() {
     }
   }

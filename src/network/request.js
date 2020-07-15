@@ -2,7 +2,8 @@ import axios from "axios"
 
 export function request(config){
   const instance = axios.create({
-    baseURL:"http://49.234.64.147:3000/search",
+    baseURL:"http://49.234.64.147:3000",
+    // baseURL:"http://localhost:3000",
     timeout:5000
   })
 

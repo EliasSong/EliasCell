@@ -1,12 +1,26 @@
 import {request} from "./request";
+import axios from "axios"
+import Qs from 'qs'
+
+
 
 export function getBlogDetail(id) {
   return request({
-    url:'/blog/'+id,
+    url:'/search/blog/'+id,
     method:"GET",
     params:{
       id,
     }
+  })
+
+}
+
+export function createNewBlog(data) {
+  return request({
+    method: 'post',
+    url: '/create/blog',
+    data: Qs.stringify(data),
+
   })
 
 }
