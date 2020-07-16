@@ -1,21 +1,21 @@
 import axios from 'axios'
 //获取歌词
 export const getWords=(id)=>{
-    return axios.get(`https://blogme.top:3000/lyric?id=${id}`);
+    return axios.get(`https://blogme.top:3000/lyric?id=${id}`,{withCredentials:true});
 }
 //获取歌曲详情
 export const getMusicInfo=(id)=>{
-    return axios.get(`https://blogme.top:3000/song/detail?ids=${id}`);
+    return axios.get(`https://blogme.top:3000/song/detail?ids=${id}`,{withCredentials:true});
 }
 //获取歌曲url
 export const getMusicUrl=(id)=>{
-    return axios.get(`https://blogme.top:3000/song/url?id=${id}`);   
+    return axios.get(`https://blogme.top:3000/song/url?id=${id}`,{withCredentials:true});
 }
 //获取热门歌曲
 export const getHotMusic=(id)=>{
-    return axios.get(`https://blogme.top:3000/top/list?idx=${id}`);
+    return axios.get(`https://blogme.top:3000/top/list?idx=${id}`,{withCredentials:true});
 }
 //获取搜索建议
 export const getSearchSuggest=(key)=>{
-    return axios.get(`https://blogme.top:3000/search/suggest?keywords=${key}`)
+    return axios.get(`https://blogme.top:3000/search/suggest?keywords=${key}`,{withCredentials:true})
 }
