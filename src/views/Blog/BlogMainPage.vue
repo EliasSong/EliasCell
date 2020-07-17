@@ -1,20 +1,32 @@
 <template>
   <div class="blog">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-1 col-md-8 offset-md-1 col-sm-12 col-xs-12">
-          <h1>我是blog</h1>
-        </div>
-        <div class="col-lg-3 ">我是about</div>
-      </div>
+
     </div>
   </div>
 
 </template>
 
 <script>
+  import {getAllBlog} from "../../network/blog";
+
   export default {
-    name: "blog"
+    name: "blog",
+    data(){
+      return{
+        blogSubPage:[]
+      }
+    },
+    created() {
+      getAllBlog().then(res => {
+        while(res.length !== 0)
+        {
+
+          this.blogSubPage.push(res.splice(0,10));
+        }
+        console.log(this.blogSubPage);
+      })
+    }
   }
 </script>
 

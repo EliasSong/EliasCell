@@ -1,10 +1,12 @@
 <template>
   <div id="app">
     <BlogNavbar ref="navbar"></BlogNavbar>
+    <div class="appContent" @click="bodyClick">
     <keep-alive exclude="BlogDetailPage">
       <router-view ></router-view>
     </keep-alive>
-    <MusicpPlayer></MusicpPlayer>
+    </div>
+    <MusicpPlayer ref="player"></MusicpPlayer>
   </div>
 </template>
 
@@ -18,6 +20,9 @@
       MusicpPlayer
     },
     methods:{
+      bodyClick(){
+        this.$refs.player.setDisactive()
+      }
 
     }
 }
@@ -27,6 +32,9 @@
   @import "assets/css/base.css";
   #app{
     background-color: #030303;
+  }
+  .appContent{
+    margin-top: 68px;
   }
 
 </style>

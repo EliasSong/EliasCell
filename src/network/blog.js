@@ -15,6 +15,14 @@ export function getBlogDetail(id) {
 
 }
 
+export function getAllBlog() {
+  return request({
+    url:"/search/blog",
+    method:"GET"
+  })
+
+}
+
 export function createNewBlog(data) {
   return request({
     method: 'post',

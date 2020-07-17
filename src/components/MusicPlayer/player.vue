@@ -84,7 +84,7 @@
                     </div>
                 </div>
                     
-                    <video id="music" autoplay="autoplay" :src="musicUrl" name="media">
+                    <video id="music"  :src="musicUrl" name="media">
                     </video>
                     
             </div>
@@ -222,6 +222,7 @@ export default {
         },
         DisList(){
             this.listIsDis=this.listIsDis ? false : true;
+
         },
         ListChange(isLast){
             if(isLast){
@@ -249,6 +250,9 @@ export default {
         },
         DisActive(){
             this.disActive=this.disActive ? false : true;
+        },
+        setDisactive(){
+          this.disActive = false
         },
         _getMusicType(id){
             if(this.thisMusicType!=id){
@@ -354,10 +358,10 @@ export default {
             let player=$('#music')[0];
             let playerTimer=setInterval(timer,1000);
             //定时器函数
-            $('body').on('click',()=>{
+            $('.pan').on('click',()=>{
                 player.play();
-                $('body').unbind('click');
-                
+                $('.pan').unbind('click');
+
             })
             function timer(){
                 self.currentProgress=`${(player.currentTime/player.duration)*100}%`
@@ -454,6 +458,7 @@ export default {
             player.currentTime=100;
         }
     },
+
 }
 </script>
 <style scoped>

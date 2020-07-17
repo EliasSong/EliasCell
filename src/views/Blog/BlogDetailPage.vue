@@ -69,7 +69,6 @@
 
 <style scoped>
   .detail{
-    margin-top: 68px;
     color: #eeeeee;
   }
   .homejubotron{

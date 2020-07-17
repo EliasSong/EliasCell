@@ -51,7 +51,7 @@
     created() {
       getHomeBlogData().then(res => {
 
-        this.homeBlogList = res
+        this.homeBlogList = res.splice(0,5)
 
       })
     },
@@ -60,7 +60,6 @@
 
 <style scoped>
  .home{
-   margin-top: 68px;
    color: #eeeeee;
  }
   .homejubotron{
