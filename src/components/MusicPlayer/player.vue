@@ -55,7 +55,7 @@
             </div>
         </transition>
         <div class="bbox">
-            <div class="pan" :style="{backgroundImage:'url('+pan+')'}" :class="{pan_active:disActive}" @click="DisActive">
+            <div class="pan playbox" :style="{backgroundImage:'url('+pan+')'}" :class="{pan_active:disActive}" @click="DisActive">
                 <img :src="musicImg" alt="" class="pan_c">
             </div>
             <div class="box" :style="{backgroundImage:'url('+musicImg+')'}" :class="{box_active:disActive}" @dblclick="DisList">
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                     
-                    <video id="music"  :src="musicUrl" name="media">
+                    <video id="music" autoplay="autoplay" :src="musicUrl" name="media">
                     </video>
                     
             </div>
@@ -195,7 +195,6 @@ export default {
         },
         ListAdd(obj){
             getMusicInfo(obj.id).then((res)=>{
-              console.log(res);
               this.musicSearchVal='';
                 if(this.myMusicList.length==0){
                   this.myMusicList=[res.data.songs[0]];
@@ -233,7 +232,7 @@ export default {
         },
         ListPlay(id){   
             if(this.thisMusicIndex!=id){
-                this.thisMusicIndex=id>this.musicList.length-1 ? 0 : id;
+              this.thisMusicIndex=id>this.musicList.length-1 ? 0 : id;
                 this._getInfo();
                 this.top=0;
                 this.o=0;
@@ -241,7 +240,7 @@ export default {
                 this.wordsTop=0;
                 this.currentProgress='0%';
                 if(!this.playState){
-                    $('.control_icon').click();
+                  $('.control_icon').click();
                 }
             }
         },
@@ -288,8 +287,9 @@ export default {
                         this.wordIndex=0;
                         this.wordsTop=0;
                         this.currentProgress='0%';
+
                         if(!this.playState){
-                            $('.control_icon').click();
+                          $('.control_icon').click();
                         }
                     })
                 }
@@ -358,10 +358,9 @@ export default {
             let player=$('#music')[0];
             let playerTimer=setInterval(timer,1000);
             //定时器函数
-            $('.pan').on('click',()=>{
+            $('.playbox').on('click',()=>{
                 player.play();
-                $('.pan').unbind('click');
-
+                $('.playbox').unbind('click');
             })
             function timer(){
                 self.currentProgress=`${(player.currentTime/player.duration)*100}%`
@@ -439,12 +438,14 @@ export default {
             })
             //播放暂停按钮控制
             $('.control_icon').on('click',()=>{
-                if(this.playState){
+              if(this.playState){
+                    console.log("pause")
                     player.pause();
                     this.playState=false;
                     this.playIcon=this.play;
                     clearInterval(playerTimer);
                 }else{
+                    console.log("play");
                     player.play();
                     this.playState=true;
                     this.playIcon=this.pause;

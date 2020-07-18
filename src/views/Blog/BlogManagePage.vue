@@ -6,7 +6,6 @@
           {{blogData}}
         </div>
       </div>
-
       <mavonEditor
               @save="saveDoc"
               @change="updateDoc"

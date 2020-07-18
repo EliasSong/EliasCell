@@ -6,11 +6,16 @@ import Qs from 'qs'
 
 export function getBlogDetail(id) {
   return request({
-    url:'/search/blog/'+id,
+    url:'/search/blog/detail/'+id,
     method:"GET",
-    params:{
-      id,
-    }
+  })
+
+}
+
+export function getBlogRecommend(tag) {
+  return request({
+    url:"/search/blog/tag/"+tag,
+    method:"GET"
   })
 
 }

@@ -42,5 +42,8 @@
     height: 1px;
     background-color: #eeeeee;
   }
+  .text-muted{
+    text-align: center;
+  }
 
 </style>

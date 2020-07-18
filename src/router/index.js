@@ -6,16 +6,16 @@ const WelcomePage = () => import("../views/WelcomePage/WelcomePage")
 
 const Home = () => import("../views/Home/Home")
 
-const Bubble = () => import("../views/Bubble/bubble")
 
 const BlogMainPage = () => import("../views/Blog/BlogMainPage")
 
 const BlogDetailPage = () => import("../views/Blog/BlogDetailPage")
 
-const BlogManagePage = () => import("../views/Blog/BlogManagePage")
+
 
 const BlogCreatePage =() => import("../views/BackManage/BlogCreatePage")
 
+const BlogManagePage =() => import("../views/BackManage/BlogManagePage")
 
 const routes=[
   {
@@ -27,10 +27,6 @@ const routes=[
     component:Home
   },
   {
-    path:"/bubble",
-    component:Bubble
-  },
-  {
     path:"/blog",
     component:BlogMainPage
   },
@@ -39,12 +35,12 @@ const routes=[
     component:BlogDetailPage
   },
   {
-    path: "/blog/:blogId/manage",
-    component:BlogManagePage,
-  },
-  {
     path: "/manage/blog/create",
     component:BlogCreatePage
+  },
+  {
+    path:"/manage/blog",
+    component:BlogManagePage
   }
 ]
 

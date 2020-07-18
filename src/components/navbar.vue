@@ -1,9 +1,9 @@
 <template>
   <div class="blognavbar">
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-          <a class="navbar-brand" href="/">
+          <div class="navbar-brand navicon" @click="goToRoot">
             <i class="fas fa-blog fa-2x"></i>
-          </a>
+          </div>
           <button class="navbar-toggler" id="navBtn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -44,6 +44,12 @@
           this.currentPath = path;
         }
       },
+      goToRoot(){
+        if(this.$route.path !== "/"){
+          this.$router.push("/")
+        }
+
+      }
 
     },
     data(){
@@ -72,6 +78,53 @@
   .nav-item:hover .nav-link-bottom{
     width: 100%;
   }
+  .navicon:hover{
+    animation: shake 0.5s;
+
+    -webkit-animation: shake 0.5s;
+
+  }
+  @keyframes shake{
+    0%,
+    100%{
+      transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90%{
+      transform: translateX(-5px) rotate(-8deg);
+
+    }
+    20%,
+    40%,
+    60%,
+    80%{
+      transform: translateX(5px) rotate(8deg);
+    }
+  }
+  @-webkit-keyframes shake{
+    0%,
+    100%{
+      transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90%{
+      transform: translateX(-5px) rotate(-8deg);
+
+    }
+    20%,
+    40%,
+    60%,
+    80%{
+      transform: translateX(5px) rotate(8deg);
+    }
+  }
+
 
 
 
