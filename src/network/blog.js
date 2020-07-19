@@ -19,6 +19,13 @@ export function getBlogRecommend(tag) {
   })
 
 }
+export function deleteBlog(id) {
+  return request({
+    url:"/delete/blog/"+id,
+    method:"DELETE"
+  })
+
+}
 
 export function getAllBlog() {
   return request({

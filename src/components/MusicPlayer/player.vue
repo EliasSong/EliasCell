@@ -439,13 +439,11 @@ export default {
             //播放暂停按钮控制
             $('.control_icon').on('click',()=>{
               if(this.playState){
-                    console.log("pause")
                     player.pause();
                     this.playState=false;
                     this.playIcon=this.play;
                     clearInterval(playerTimer);
                 }else{
-                    console.log("play");
                     player.play();
                     this.playState=true;
                     this.playIcon=this.pause;

@@ -32,6 +32,7 @@
   @import "assets/css/base.css";
   #app{
     background-color: #030303;
+    height: 100%;
   }
   .appContent{
     margin-top: 68px;

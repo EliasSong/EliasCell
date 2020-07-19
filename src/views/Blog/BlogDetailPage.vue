@@ -33,7 +33,7 @@
 <script>
   import "mavon-editor/dist/css/index.css";
   import {getBlogDetail,getBlogRecommend} from "../../network/blog";
-
+  import $ from "jquery"
   import BlogDetailCopyright from "../../components/copyright";
   import BlogDetailBlogRecommend from "./ChildrenComponents/BlogDetailBlogRecommend";
   import VueMarkdown from "vue-markdown"
@@ -70,6 +70,7 @@
     watch:{
       '$route'(to, from) {
         this.getDetailPageData()
+        $("body,html").animate({scrollTop:0},100);
       }
     },
 

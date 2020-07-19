@@ -3,7 +3,7 @@
     <div class="container">
       <div class="card" v-for="(item,index) in allBlogData" :key="index">
         <div class="card-body">
-          <h1>{{item.blogTitle}}</h1>
+          <h1 @click="blogDetialShow(item._id)">{{item.blogTitle}}</h1>
           <div class="bodycontent">
             <hr class="my-4">
             <p class="lead">{{item.blogDesc}}</p>
@@ -13,7 +13,7 @@
         <div class="card-footer">
           <div class="btn btn-primary btn-lg">修改</div>
           <div v-if="!confirmFlag" class="btn btn-danger btn-lg" @click="confirm">删除</div>
-          <div v-else class="btn btn-danger btn-lg" @click="deleteBlog(item._id)">确认删除</div>
+          <div v-else class="btn btn-danger btn-lg" @click="deleteblog(item._id)">确认删除</div>
         </div>
       </div>
     </div>
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-  import {getAllBlog} from "../../network/blog";
+  import {getAllBlog,deleteBlog} from "../../network/blog";
 
   export default {
     name: "BlogManagePage",
@@ -41,9 +41,17 @@
       confirm(){
         this.confirmFlag = true
       },
-      deleteBlog(id){
-        console.log(id);
-        this.confirmFlag= false
+      deleteblog(id){
+        this.confirmFlag= false;
+        deleteBlog(id).then(res => {
+          console.log(res);
+          getAllBlog().then(res => {
+            this.allBlogData = res
+          })
+        })
+      },
+      blogDetialShow(id){
+        this.$router.push("/blog/"+id)
       }
     }
   }
@@ -67,5 +75,9 @@
   }
   .btn{
     margin-right: 15px;
+  }
+  h1:hover{
+    color:#4682b4;
+    text-decoration:none;
   }
 </style>
