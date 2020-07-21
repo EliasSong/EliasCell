@@ -30,7 +30,7 @@
           </a>
         </div>
       <div class="AlbumBtn">
-        <div v-for="(item,index) in albumClipNameList" :key="index" class="AlbumName" :class="{'active':index === currentIdx}"
+        <div v-for="(item,index) in albumClipNameList" :key="index" class="AlbumName" :class="{'itemactive':index === currentIdx}"
            @click="carouselChange(index)"><p class="lead">{{item}}</p></div>
       </div>
     </div>
@@ -89,7 +89,7 @@
   .AlbumName:hover{
     background-color: rgb(40,40,40);
   }
-  .active{
+  .itemactive{
     background-color: rgb(45,45,45);
   }
 

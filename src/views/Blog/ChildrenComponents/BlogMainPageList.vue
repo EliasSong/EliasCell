@@ -40,8 +40,8 @@
     -webkit-transition: all 0.2s ease;
   }
   .card:hover{
-    transform: scale(1.008);
-    -webkit-transform: scale(1.008);
+    transform: scale(1.01);
+    -webkit-transform: scale(1.01);
     /*box-shadow:1px 1px 5px rgba(28,28,28,.5),-1px -1px 5px rgba(28,28,28,.5);*/
 
   }
@@ -50,5 +50,10 @@
   }
   .bodycontent{
     color: rgb(152,152,158);
+  }
+  .bodycontent hr{
+    height: 1px;
+    border-style: solid;
+    background-color: rgb(152,152,158);
   }
 </style>

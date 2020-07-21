@@ -164,7 +164,7 @@ export default {
     },
     computed: {
         thisMusicList(){
-            return [...this.musicList].splice((this.thisListPage-1)*10,10);  //分页
+            return [...this.musicList].splice((this.thisListPage-1)*8,8);  //分页
         },
         
     },

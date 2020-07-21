@@ -102,9 +102,5 @@
     background-color: rgb(50,50,50);
   }
 
-  .bodycontent hr{
-    height: 1px;
-    border-style: solid;
-    background-color: rgb(152,152,158);
-  }
+
 </style>

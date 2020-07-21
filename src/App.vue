@@ -5,8 +5,10 @@
     <keep-alive exclude="BlogDetailPage">
       <router-view ></router-view>
     </keep-alive>
+
     </div>
     <MusicpPlayer ref="player"></MusicpPlayer>
+
   </div>
 </template>
 
