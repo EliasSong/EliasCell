@@ -53,7 +53,6 @@
         getBlogDetail(this.id).then(res => {
           this.blogData = res;
           document.querySelector(".homejubotron").style.backgroundImage = "url("+this.blogData.blogCarousel+")"
-
           getBlogRecommend(this.blogData.blogTag).then(res => {
             let idx = res.findIndex(blog => {
               return blog._id === this.blogData._id

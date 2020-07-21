@@ -6,3 +6,11 @@ export function getAllAlbum() {
     method:"GET"
   })
 }
+
+export function getAlbumDetail(id) {
+  return request({
+    url:"/search/album/detail/"+id,
+    method:"GET"
+  })
+
+}

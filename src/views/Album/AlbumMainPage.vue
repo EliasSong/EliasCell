@@ -1,5 +1,5 @@
 <template>
-  <div class="albumdetail">
+  <div class="albummain">
     <div class="jumbotron jumbotron-fluid albumjubotron text-white">
       <div class="container">
         <h1 class="display-4">Album</h1>
@@ -83,7 +83,7 @@
 </script>
 
 <style scoped>
-  .albumdetail{
+  .albummain{
     color: #eeeeee;
   }
   .albumjubotron{
