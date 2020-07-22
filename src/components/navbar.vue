@@ -32,6 +32,8 @@
 </template>
 
 <script>
+  import $ from "jquery";
+
   export default {
     name: "navbar",
     methods:{
@@ -59,6 +61,11 @@
     },
 
     created() {
+    },
+    watch:{
+      '$route'(to, from) {
+       this.currentPath = this.$route.path;
+      }
     }
   }
 

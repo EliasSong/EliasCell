@@ -69,7 +69,7 @@
     watch:{
       '$route'(to, from) {
         this.getDetailPageData()
-        $("body,html").animate({scrollTop:0},100);
+        $("body,html").animate({scrollTop:0},10);
       }
     },
 

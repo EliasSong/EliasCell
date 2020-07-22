@@ -4,7 +4,7 @@
       <div class="container">
         <h1 class="display-4">欢迎来到Elias Cell</h1>
         <hr class="my-4">
-        <p class="lead">首先献上我诚挚的问候，这里只有一些日常记录，学习，感想，以及碎碎念，如若不是感兴趣者，请离开吧。</p>
+        <p class="lead">地球Online某处不知名角落</p>
       </div>
     </div>
     <div class="container">

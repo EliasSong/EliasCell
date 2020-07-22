@@ -2,7 +2,7 @@
   <div id="app">
     <BlogNavbar ref="navbar"></BlogNavbar>
     <div class="appContent" @click="bodyClick">
-    <keep-alive exclude="BlogDetailPage">
+    <keep-alive exclude="BlogDetailPage,AlbumDetailPage">
       <router-view ></router-view>
     </keep-alive>
 

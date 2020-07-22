@@ -1,7 +1,7 @@
 <template>
   <div class="AlbumClip">
     <div class="card">
-      <h5 class="card-header">Album <a class="more" href="/home">More <i class="fas fa-angle-double-right"></i></a></h5>
+      <h5 class="card-header">Album <a class="more" @click="goToAlbum">More <i class="fas fa-angle-double-right"></i></a></h5>
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active" >
@@ -50,6 +50,9 @@
     methods:{
       carouselChange(index){
         this.currentIdx = index;
+      },
+      goToAlbum(){
+        this.$router.push("/album")
       }
     }
   }

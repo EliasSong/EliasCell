@@ -5,7 +5,7 @@
         <waterfall  class="list" :col="3"
                    :data="item.albumImage">
           <template>
-            <div v-for="(image, imageIdx) in item.albumImage.slice(0,10)" :key="imageIdx">
+            <div v-for="(image, imageIdx) in item.albumImage.slice(0,4)" :key="imageIdx">
               <img :src="image.imageURL" alt="loading" class="img-thumbnail" >
             </div>
 
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+  import $ from "jquery"
   export default {
     name: "AlbumMainPageList",
     props:{
@@ -35,11 +36,10 @@
     },
     created() {
 
-      console.log(this.albumMainPageList);
     },
     methods:{
       goToDetail(id){
-        console.log(id);
+        $("body,html").animate({scrollTop:0},10);
         this.$router.push("/album/"+id)
       }
     }

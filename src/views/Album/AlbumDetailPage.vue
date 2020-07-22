@@ -53,7 +53,7 @@
     },
     created() {
       this.id = this.$route.params.albumId
-      getAlbumDetail("5f1472d4ada1ce359027c145").then(res => {
+      getAlbumDetail(this.id).then(res => {
         console.log(res);
         this.albumDetailData = res
       })

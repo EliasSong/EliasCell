@@ -1,7 +1,7 @@
 <template>
   <div class="BlogClip">
     <div class="card">
-      <h5 class="card-header">Blog <a class="more" href="/home">More <i class="fas fa-angle-double-right"></i></a></h5>
+      <h5 class="card-header">Blog <a class="more" @click="goToBlog">More <i class="fas fa-angle-double-right"></i></a></h5>
       <div class="card-body">
         <HomeBlogClipItem v-for="(item,index) in homeBlogList" :key="index" :blog-data="item" ></HomeBlogClipItem>
       </div>
@@ -25,6 +25,11 @@
     components:{
       HomeBlogClipItem,
     },
+    methods:{
+      goToBlog(){
+        this.$router.push("/blog")
+      }
+    }
 
   }
 </script>

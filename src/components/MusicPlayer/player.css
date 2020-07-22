@@ -237,7 +237,7 @@
 
 
     background: -webkit-radial-gradient(center, ellipse cover, #353138 0%,#1a181c 100%);
-    z-index: 499;
+    z-index: 5000;
     transition: all .5s;
 }
 .music_alert-enter,.music_alert-leave-to{

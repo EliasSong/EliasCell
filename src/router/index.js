@@ -10,6 +10,9 @@ const BlogCreatePage =() => import("../views/BackManage/BlogCreatePage")
 const BlogManagePage =() => import("../views/BackManage/BlogManagePage")
 const AlbumMainPage =() => import("../views/Album/AlbumMainPage")
 const AlbumDetailPage =() => import("../views/Album/AlbumDetailPage")
+const AlbumCreatePage =() => import("../views/BackManage/AlbumCreatePage")
+const AlbumManagePage =() => import("../views/BackManage/AlbumManagePage")
+const ImageCreatePage =() => import("../views/BackManage/ImageCreatePage")
 
 const routes=[
   {
@@ -43,6 +46,18 @@ const routes=[
   {
     path:"/manage/blog",
     component:BlogManagePage
+  },
+  {
+    path:"/manage/album/create",
+    component:AlbumCreatePage,
+  },
+  {
+    path:"/manage/album",
+    component:AlbumManagePage
+  },
+  {
+    path:"/manage/album/:albumId/image/create",
+    component:ImageCreatePage
   }
 ]
 

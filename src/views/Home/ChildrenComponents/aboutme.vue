@@ -6,7 +6,7 @@
       <div class="card-body">
         <h1>宋颍博</h1>
         <h1>Elias Song</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <p class="lead">若无必要 不增实体</p>
         <hr class="my-4">
         <p class="lead"><i class="fas fa-envelope"></i> : eliassong1997@gmail.com</p>
         <p class="lead"><i class="fab fa-weixin"></i> : SagenSiebitte</p>
