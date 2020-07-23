@@ -2,7 +2,7 @@
   <div class="about">
     <div class="card">
       <h5 class="card-header">About me</h5>
-      <img src="../../../assets/image/Aboutme/aboutme.jpg" class="card-img-top" alt="...">
+      <img src="https://eliassong-1301617095.cos.ap-shanghai.myqcloud.com/Blog/image/Aboutme/aboutme.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h1>宋颍博</h1>
         <h1>Elias Song</h1>

@@ -78,7 +78,7 @@
     color: #eeeeee;
   }
   .blogjubotron{
-    background-image: url("../../assets/image/Blog/BlogBackgroundImg.jpg");
+    background-image: url("https://eliassong-1301617095.cos.ap-shanghai.myqcloud.com/Blog/image/Blog/BlogBackgroundImg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

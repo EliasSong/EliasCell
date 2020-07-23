@@ -87,7 +87,7 @@
     color: #eeeeee;
   }
   .albumjubotron{
-    background-image: url("../../assets/image/Album/AlbumBackgroundImg.jpg");
+    background-image: url("https://eliassong-1301617095.cos.ap-shanghai.myqcloud.com/Blog/image/Album/AlbumBackgroundImg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

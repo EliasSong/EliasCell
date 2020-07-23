@@ -63,7 +63,7 @@
    color: #eeeeee;
  }
   .homejubotron{
-    background-image: url("../../assets/image/Home/HomeBackgroundImg.jpg");
+    background-image: url("https://eliassong-1301617095.cos.ap-shanghai.myqcloud.com/Blog/image/Home/HomeBackgroundImg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
