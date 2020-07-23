@@ -78,7 +78,7 @@
     color: #eeeeee;
   }
   .blogjubotron{
-    background-image: url("../../assets/image/Home/HomeBackgroundImg.jpg");
+    background-image: url("../../assets/image/Blog/BlogBackgroundImg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

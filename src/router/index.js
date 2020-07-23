@@ -13,6 +13,7 @@ const AlbumDetailPage =() => import("../views/Album/AlbumDetailPage")
 const AlbumCreatePage =() => import("../views/BackManage/AlbumCreatePage")
 const AlbumManagePage =() => import("../views/BackManage/AlbumManagePage")
 const ImageCreatePage =() => import("../views/BackManage/ImageCreatePage")
+const AppsPage =() => import("../views/App/AppsPage")
 
 const routes=[
   {
@@ -58,6 +59,10 @@ const routes=[
   {
     path:"/manage/album/:albumId/image/create",
     component:ImageCreatePage
+  },
+  {
+    path:"/app",
+    component:AppsPage
   }
 ]
 

@@ -87,7 +87,7 @@
     color: #eeeeee;
   }
   .albumjubotron{
-    background-image: url("../../assets/image/Home/HomeBackgroundImg.jpg");
+    background-image: url("../../assets/image/Album/AlbumBackgroundImg.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

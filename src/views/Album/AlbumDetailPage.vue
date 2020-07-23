@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="container-fluid">
-      <waterfall id="fall" class="list" :col="3"
+      <waterfall id="fall" class="list" :col="col"
                  :data="albumDetailData.albumImage" >
         <template>
           <div v-for="(item, index) in albumDetailData.albumImage" :key="index">
@@ -36,20 +36,15 @@
     data(){
       return{
         id:0,
+        currentWidth:0,
+        col:1 + document.body.clientWidth/720,
         albumDetailData:{
-          albumImage:[]
+          albumImage:[],
         },
-        // test:["https://eliassong-1301617095.cos.ap-shanghai.myqcloud.com/Blog/album/testalbum/131458279781835852.jpg","https://eliassong-1301617095.cos.ap-shanghai.myqcloud.com/Blog/album/testalbum/131458279781835852.jpg"
-        //   ,"https://eliassong-1301617095.cos.ap-shanghai.myqcloud.com/Blog/album/testalbum/131458279781835852.jpg",
-        //   "https://eliassong-1301617095.cos.ap-shanghai.myqcloud.com/Blog/album/testalbum/131458279781835852.jpg",
-        //   "https://eliassong-1301617095.cos.ap-shanghai.myqcloud.com/Blog/album/testalbum/131458279781835852.jpg",
-        //   "https://eliassong-1301617095.cos.ap-shanghai.myqcloud.com/Blog/album/testalbum/692954128313604911.jpg",
-        //   "https://eliassong-1301617095.cos.ap-shanghai.myqcloud.com/Blog/album/testalbum/692954128313604911.jpg",
-        //   "https://eliassong-1301617095.cos.ap-shanghai.myqcloud.com/Blog/album/testalbum/759454283621323623.png",
-        //   "https://eliassong-1301617095.cos.ap-shanghai.myqcloud.com/Blog/album/testalbum/759454283621323623.png",
-        //
-        // ]
       }
+    },
+    computed:{
+
     },
     created() {
       this.id = this.$route.params.albumId
@@ -57,6 +52,21 @@
         console.log(res);
         this.albumDetailData = res
       })
+      console.log(document.body.clientWidth);
+    },
+    mounted() {
+      window.onresize = () => {
+          this.currentWidth = document.body.clientWidth;
+          if(this.currentWidth>1000){
+            this.col = 3
+          }
+          else if(this.currentWidth>700){
+            this.col = 2
+          }
+          else{
+            this.col = 1
+          }
+      }
     }
   }
 </script>
