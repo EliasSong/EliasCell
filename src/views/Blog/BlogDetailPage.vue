@@ -106,6 +106,8 @@
   }
   .card{
     background-color: rgb(28,28,28);
+    max-width: 750px;
+    margin-bottom: 15px;
   }
   .card-body{
     padding: 0;
@@ -116,9 +118,7 @@
     padding: 30px 20px;
     z-index: 0;
   }
-  .content{
-    max-width: 750px;
-  }
+
   .btn{
     float: right;
   }
