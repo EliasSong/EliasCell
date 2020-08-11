@@ -15,7 +15,8 @@
             <h5 class="card-header"><i class="fa fa-file"></i></h5>
 <!--            <div class="card-body" v-html="blogData.blogHTMLContent">{{blogData.blogHTMLContent}}</div>-->
             <div class="card-body">
-              <VueMarkdown :source="blogData.blogMDContent"></VueMarkdown>
+              <mavon-editor codeStyle="monokai" class="card-body-content" v-html="blogData.blogHTMLContent"></mavon-editor>
+<!--              <VueMarkdown :source="blogData.blogMDContent"></VueMarkdown>-->
             </div>
           </div>
         </div>
@@ -32,11 +33,11 @@
 
 <script>
   import "mavon-editor/dist/css/index.css";
+  import { mavonEditor } from "mavon-editor";
   import {getBlogDetail,getBlogRecommend} from "../../network/blog";
   import $ from "jquery"
   import BlogDetailCopyright from "../../components/copyright";
   import BlogDetailBlogRecommend from "./ChildrenComponents/BlogDetailBlogRecommend";
-  import VueMarkdown from "vue-markdown"
   export default {
 
     name: "BlogDetailPage",
@@ -82,7 +83,8 @@
     components:{
       BlogDetailCopyright,
       BlogDetailBlogRecommend,
-      VueMarkdown
+
+      mavonEditor
     },
   }
 </script>
@@ -104,6 +106,15 @@
   }
   .card{
     background-color: rgb(28,28,28);
+  }
+  .card-body{
+    padding: 0;
+  }
+  .card-body-content{
+    background-color: rgb(28,28,28);
+    color: #eeeeee;
+    padding: 30px 20px;
+    z-index: 0;
   }
   .content{
     max-width: 750px;
