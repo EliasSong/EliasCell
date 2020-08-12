@@ -34,7 +34,7 @@
     },
     created() {
       getAllBlog().then(res => {
-        this.allBlogData = res
+        this.allBlogData = res.reverse()
       })
     },
     methods:{

@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col-lg-8  col-md-8  col-sm-12 col-xs-12">
           <div class="card content">
-            <h5 class="card-header"><i class="fa fa-file"></i></h5>
+            <h5 class="card-header"><i class="fas fa-pen-alt"></i></h5>
 <!--            <div class="card-body" v-html="blogData.blogHTMLContent">{{blogData.blogHTMLContent}}</div>-->
             <div class="card-body">
               <mavon-editor codeStyle="monokai" class="card-body-content" v-html="blogData.blogHTMLContent"></mavon-editor>

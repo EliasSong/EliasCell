@@ -40,6 +40,7 @@
     name: "blog",
     data(){
       return{
+        allBlogData:[],
         blogSubPage:[],
         currentPage:0,
       }
@@ -59,11 +60,11 @@
     },
     created() {
       getAllBlog().then(res => {
-        while(res.length !== 0)
+        this.allBlogData = res.reverse()
+        while(this.allBlogData.length !== 0)
         {
-          this.blogSubPage.push(res.splice(0,3));
+          this.blogSubPage.push(this.allBlogData.splice(0,3));
         }
-
       })
     },
     components:{
