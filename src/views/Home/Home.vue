@@ -50,8 +50,7 @@
     },
     created() {
       getHomeBlogData().then(res => {
-
-        this.homeBlogList = res.splice(0,5)
+        this.homeBlogList = res.reverse().splice(0,5)
 
       })
     },

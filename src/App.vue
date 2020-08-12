@@ -7,7 +7,7 @@
     </keep-alive>
 
     </div>
-    <MusicpPlayer ref="player"></MusicpPlayer>
+    <MusicpPlayer v-if="!mobileDeviceFlag" ref="player"></MusicpPlayer>
 
   </div>
 </template>
@@ -17,6 +17,11 @@
   import MusicpPlayer from "./components/MusicPlayer";
   export default {
     name: 'App',
+    data(){
+      return{
+        mobileDeviceFlag:false
+      }
+    },
     components: {
       BlogNavbar,
       MusicpPlayer
@@ -26,8 +31,13 @@
         this.$refs.player.setDisactive()
       }
 
+    },
+    created() {
+      if(document.body.clientWidth<990){
+        this.mobileDeviceFlag = true
+      }
     }
-}
+  }
 </script>
 
 <style>

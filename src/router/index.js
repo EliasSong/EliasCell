@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 Vue.use(Router)
 
-const WelcomePage = () => import("../views/WelcomePage/WelcomePage")
 const Home = () => import("../views/Home/Home")
 const BlogMainPage = () => import("../views/Blog/BlogMainPage")
 const BlogDetailPage = () => import("../views/Blog/BlogDetailPage")
@@ -18,7 +17,7 @@ const AppsPage =() => import("../views/App/AppsPage")
 const routes=[
   {
     path:"",
-    component:WelcomePage
+    redirect:"/home"
   },
   {
     path:"/home",

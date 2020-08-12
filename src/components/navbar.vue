@@ -47,10 +47,7 @@
         }
       },
       goToRoot(){
-        if(this.$route.path !== "/"){
-          this.$router.push("/")
-        }
-
+        window.location.href="http://eliassong.cn"
       }
 
     },
@@ -61,6 +58,9 @@
     },
 
     created() {
+    },
+    props:{
+
     },
     watch:{
       '$route'(to, from) {
