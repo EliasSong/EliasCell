@@ -21,12 +21,14 @@
           </div>
         </div>
         <div class="col-lg-4  col-md-4  col-sm-12 col-xs-12 ">
+          <BlogDetailOperatePart :pre-blog-data="preBlogData" :next-blog-data="nextBlogData"></BlogDetailOperatePart>
           <BlogDetailBlogRecommend :recommended-blog-data="recommendedBlogData"></BlogDetailBlogRecommend>
         </div>
       </div>
     </div>
-
+<!--    <backButton class="backBtn"></backButton>-->
     <BlogDetailCopyright></BlogDetailCopyright>
+
 
   </div>
 </template>
@@ -34,10 +36,12 @@
 <script>
   import "mavon-editor/dist/css/index.css";
   import { mavonEditor } from "mavon-editor";
-  import {getBlogDetail,getBlogRecommend} from "../../network/blog";
+  import {getBlogDetail,getBlogRecommend,getAllBlog} from "../../network/blog";
   import $ from "jquery"
   import BlogDetailCopyright from "../../components/copyright";
   import BlogDetailBlogRecommend from "./ChildrenComponents/BlogDetailBlogRecommend";
+  import BlogDetailOperatePart from "./ChildrenComponents/BlogDetailOperatePart";
+  // import backButton from "../../components/back";
   export default {
 
     name: "BlogDetailPage",
@@ -45,7 +49,9 @@
       return {
         id:0,
         blogData: {},
-        recommendedBlogData: []
+        recommendedBlogData: [],
+        preBlogData:{},
+        nextBlogData:{}
       }
     },
     methods: {
@@ -59,10 +65,34 @@
               return blog._id === this.blogData._id
             })
             res.splice(idx,1)
-            this.recommendedBlogData = res.slice(0,5)
-          })
+            this.recommendedBlogData = res
 
+          })
+          getAllBlog().then(res => {
+            let idx = res.findIndex(blog => {
+              return blog._id === this.blogData._id
+            })
+            if(idx>0&&idx<res.length-1){
+              this.preBlogData = res[idx-1]
+              this.nextBlogData = res[idx+1]
+            }
+            else if(idx<=0){
+              this.preBlogData = {
+                _id:-1,
+                blogTitle:"无"
+              }
+              this.nextBlogData = res[idx+1]
+            }
+            else{
+              this.preBlogData = res[idx-1]
+              this.nextBlogData = {
+                _id:-1,
+                blogTitle:"无"
+              }
+            }
+          })
         });
+
 
       }
 
@@ -83,7 +113,8 @@
     components:{
       BlogDetailCopyright,
       BlogDetailBlogRecommend,
-
+      // backButton,
+      BlogDetailOperatePart,
       mavonEditor
     },
   }
@@ -121,5 +152,10 @@
 
   .btn{
     float: right;
+  }
+  .backBtn{
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
   }
 </style>

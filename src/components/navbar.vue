@@ -45,6 +45,7 @@
           this.$router.push(path);
           this.currentPath = path;
         }
+        $("body,html").animate({scrollTop:0},10);
       },
       goToRoot(){
         window.location.href="http://eliassong.cn"

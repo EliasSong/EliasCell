@@ -2,7 +2,7 @@ import {request} from "./request";
 
 export function getHomeBlogData(){
   return request({
-    url:"/search/blog",
+    url:"/search/blog/homeBlogData",
     method:"GET"
   })
 }

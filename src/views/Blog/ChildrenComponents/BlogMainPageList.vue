@@ -40,11 +40,12 @@
     -webkit-transition: all 0.2s ease;
   }
   .card:hover{
-    transform: scale(1.01);
-    -webkit-transform: scale(1.01);
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
     /*box-shadow:1px 1px 5px rgba(28,28,28,.5),-1px -1px 5px rgba(28,28,28,.5);*/
 
   }
+
   .card-body{
     border-left: solid 5px #eeeeee;
   }
