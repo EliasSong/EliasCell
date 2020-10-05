@@ -24,7 +24,7 @@
 
 <style scoped>
   .card{
-    background-color: rgb(28,28,29);
+    background-color: rgb(36,36,36);
     color:#eeeeee
   }
   hr{

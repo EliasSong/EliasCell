@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
 .card {
-  background-color: rgb(28, 28, 28);
+  background-color: rgb(36,36,36);
   margin-bottom: 15px;
   transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;

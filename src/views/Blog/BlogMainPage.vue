@@ -93,7 +93,7 @@
     background-color: #ffffff;
   }
   .pagecount{
-    background-color: rgb(28,28,28);
+    background-color: rgb(36,36,36);
     color: #eeeeee;
     border-color:  rgb(50,50,50);
     transition: all 0.3s ease;

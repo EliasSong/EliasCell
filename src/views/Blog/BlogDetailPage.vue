@@ -113,7 +113,6 @@
     components:{
       BlogDetailCopyright,
       BlogDetailBlogRecommend,
-      // backButton,
       BlogDetailOperatePart,
       mavonEditor
     },
@@ -136,7 +135,7 @@
     background-color: #ffffff;
   }
   .card{
-    background-color: rgb(28,28,28);
+    background-color: rgb(36,36,36);
     max-width: 750px;
     margin-bottom: 15px;
   }
@@ -144,7 +143,7 @@
     padding: 0;
   }
   .card-body-content{
-    background-color: rgb(28,28,28);
+    background-color: rgb(36,36,36);
     color: #eeeeee;
     padding: 30px 20px;
     z-index: 0;

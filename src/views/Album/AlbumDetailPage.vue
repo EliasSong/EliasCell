@@ -91,10 +91,10 @@
   }
   .img-thumbnail{
     border-color: rgb(50,50,50) ;
-    background-color: rgb(28,28,28);
+    background-color: rgb(36,36,36);
   }
   .card{
-    background-color: rgb(28,28,29);
+    background-color: rgb(36,36,36);
     color: rgb(152,152,158);
     margin: 2px;
     border-collapse:collapse;

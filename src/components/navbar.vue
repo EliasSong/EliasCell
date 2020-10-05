@@ -76,6 +76,8 @@
   .navbar{
     font-size: 1.5em;
     background-color: rgb(28,28,29);
+    z-index: 1700;
+
   }
   .nav-link{
     cursor: pointer;
@@ -91,7 +93,6 @@
   }
   .navicon:hover{
     animation: shake 0.5s;
-
     -webkit-animation: shake 0.5s;
 
   }

@@ -35,7 +35,7 @@
 
 <style scoped>
  .card{
-   background-color: rgb(28,28,28);
+   background-color: rgb(36,36,36);
    color: #eeeeee;
  }
 </style>

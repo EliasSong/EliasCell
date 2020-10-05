@@ -39,7 +39,14 @@ export function createNewBlog(data) {
     method: 'post',
     url: '/create/blog',
     data: Qs.stringify(data),
+  })
 
+}
+export function modifyBlog(id,data) {
+  return request({
+    method: 'put',
+    url: '/modify/blog/'+id,
+    data: Qs.stringify(data),
   })
 
 }

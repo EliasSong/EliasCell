@@ -107,7 +107,7 @@
     margin: 100px auto;
   }
   .form{
-    background-color: rgb(28,28,28);
+    background-color: rgb(36,36,36);
     border-radius: 5px;
     color: #eeeeee;
 

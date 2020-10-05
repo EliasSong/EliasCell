@@ -42,7 +42,7 @@
     margin-bottom: 10px;
   }
   .card{
-    background-color: rgb(28,28,29);
+    background-color: rgb(36,36,36);
   }
   .card-body{
 
