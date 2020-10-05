@@ -61,6 +61,7 @@
   }
   .icon i{
     transition: all ease 0.2s;
+    cursor: pointer;
     -webkit-transition: all ease 0.2s;
   }
   .icon i:hover{

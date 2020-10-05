@@ -45,7 +45,7 @@
           this.$router.push(path);
           this.currentPath = path;
         }
-        $("body,html").animate({scrollTop:0},10);
+        $("body,html").animate({scrollTop:0},0);
       },
       goToRoot(){
         window.location.href="http://eliassong.cn"
@@ -76,6 +76,9 @@
   .navbar{
     font-size: 1.5em;
     background-color: rgb(28,28,29);
+  }
+  .nav-link{
+    cursor: pointer;
   }
   .nav-link-bottom{
     height: 2px;

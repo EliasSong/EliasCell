@@ -61,6 +61,7 @@
     background-color: rgb(28,28,28);
     transition: all 0.2s ease;
     -webkit-transition: all 0.2s ease;
+    cursor: pointer;
   }
   .card:hover{
     transform: scale(1.08);

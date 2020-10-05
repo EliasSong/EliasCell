@@ -50,6 +50,7 @@
   .more{
    float: right;
     color: rgb(152,152,158);
+    cursor: pointer;
   }
   .more:hover{
     text-decoration-line: none;

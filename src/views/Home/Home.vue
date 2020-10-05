@@ -11,7 +11,6 @@
       <div class="row">
         <div class="col-lg-8  col-md-8  col-sm-12 col-xs-12">
           <HomeBlogClip :home-blog-list="homeBlogList"></HomeBlogClip>
-          <HomeAlbumClip></HomeAlbumClip>
         </div>
         <div class="col-lg-4  col-md-4  col-sm-12 col-xs-12 ">
           <HomeAboutme></HomeAboutme>
@@ -24,53 +23,49 @@
 </template>
 
 <script>
-  import HomeCopyright from "../../components/copyright";
-  import HomeBlogClip from "./ChildrenComponents/HomeBlogClip";
-  import HomeAlbumClip from "./ChildrenComponents/HomeAlbumClip";
-  import HomeAboutme from "./ChildrenComponents/aboutme";
-  import {getHomeBlogData} from "../../network/home";
+import HomeCopyright from "../../components/copyright";
+import HomeBlogClip from "./ChildrenComponents/HomeBlogClip";
+import HomeAboutme from "./ChildrenComponents/aboutme";
+import {getHomeBlogData} from "../../network/home";
 
-  export default {
-    name: "Home",
-    data(){
-      return{
-        homeBlogList:[]
-      }
-    },
-    components:{
-      HomeAboutme,
-      HomeCopyright,
-      HomeBlogClip,
-      HomeAlbumClip
-    },
-    methods:{
+export default {
+  name: "Home",
+  data() {
+    return {
+      homeBlogList: []
+    }
+  },
+  components: {
+    HomeAboutme,
+    HomeCopyright,
+    HomeBlogClip
+  },
+  methods: {},
+  created() {
+    getHomeBlogData().then(res => {
+      this.homeBlogList = res
 
-
-
-    },
-    created() {
-      getHomeBlogData().then(res => {
-        this.homeBlogList = res
-
-      })
-    },
-  }
+    })
+  },
+}
 </script>
 
 <style scoped>
- .home{
-   color: #eeeeee;
- }
-  .homejubotron{
-    background-image: url("https://eliassong-1301617095.cos.ap-shanghai.myqcloud.com/Blog/image/Home/HomeBackgroundImg.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
- .homejubotron hr{
-   border-style: solid;
-   height: 1px;
-   background-color: #ffffff;
- }
+.home {
+  color: #eeeeee;
+}
+
+.homejubotron {
+  background-image: url("https://eliassong-1301617095.cos.ap-shanghai.myqcloud.com/Blog/image/Home/HomeBackgroundImg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.homejubotron hr {
+  border-style: solid;
+  height: 1px;
+  background-color: #ffffff;
+}
 
 </style>

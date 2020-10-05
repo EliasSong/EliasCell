@@ -36,6 +36,7 @@
   import {getAllBlog} from "../../network/blog";
   import BlogMainPageList from "./ChildrenComponents/BlogMainPageList";
  import BlogMainPageCopyright from "../../components/copyright";
+  import $ from "jquery";
   export default {
     name: "blog",
     data(){
@@ -47,15 +48,17 @@
     },
     methods:{
       pageChange(index){
-        this.currentPage = index
+        this.currentPage = index;
+        $("body,html").animate({scrollTop:0},0);
       },
       pageControl(flag){
         if(flag === 1 && this.currentPage < this.blogSubPage.length - 1){
-          this.currentPage += 1
+          this.currentPage += 1;
         }
         else if(flag ===0 && this.currentPage > 0 ){
           this.currentPage -= 1;
         }
+        $("body,html").animate({scrollTop: 0}, 0);
       }
     },
     created() {
@@ -101,6 +104,9 @@
   }
   .active{
     background-color: rgb(50,50,50);
+  }
+  .page-link{
+    cursor: pointer;
   }
 
 

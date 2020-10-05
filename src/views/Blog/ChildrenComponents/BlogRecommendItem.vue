@@ -41,6 +41,9 @@
   .item p{
     color: rgb(152,152,158)
   }
+  .item h1{
+    cursor: pointer;
+  }
   .item h1:hover{
     color:#4682b4;
     text-decoration:none;

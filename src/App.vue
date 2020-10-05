@@ -1,20 +1,17 @@
 <template>
   <div id="app">
     <BlogNavbar ref="navbar"></BlogNavbar>
-    <div class="appContent" @click="bodyClick">
+    <div class="appContent">
     <keep-alive exclude="BlogDetailPage,AlbumDetailPage">
       <router-view ></router-view>
     </keep-alive>
-
     </div>
-    <MusicpPlayer v-if="!mobileDeviceFlag" ref="player"></MusicpPlayer>
 
   </div>
 </template>
 
 <script>
   import BlogNavbar from "./components/navbar";
-  import MusicpPlayer from "./components/MusicPlayer";
   export default {
     name: 'App',
     data(){
@@ -24,12 +21,8 @@
     },
     components: {
       BlogNavbar,
-      MusicpPlayer
     },
     methods:{
-      bodyClick(){
-        this.$refs.player.setDisactive()
-      }
 
     },
     created() {
