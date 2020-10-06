@@ -4,7 +4,7 @@
       <div class="container">
         <h1 class="display-4">欢迎来到Elias Cell</h1>
         <hr class="my-4">
-        <p class="lead">地球Online某处不知名角落</p>
+        <p class="lead">地球Online某处不知名角落。</p>
       </div>
     </div>
     <div class="container">

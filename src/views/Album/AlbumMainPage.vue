@@ -4,7 +4,7 @@
       <div class="container">
         <h1 class="display-4">Album</h1>
         <hr class="my-4">
-        <p class="lead">记录生活的光影</p>
+        <p class="lead">记录生活的光影。</p>
       </div>
     </div>
       <div class="container">

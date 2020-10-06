@@ -22,11 +22,11 @@
           <div class="form-group">
             <label for="editor">Content</label>
             <mavonEditor
-              @save="saveDoc"
-              @change="updateDoc"
-              id="editor"
-              v-model="modifyBlogMDContent"
-             >
+                @save="saveDoc"
+                @change="updateDoc"
+                id="editor"
+                v-model="modifyBlogMDContent"
+            >
             </mavonEditor>
           </div>
           <div @click="submittUpdate" class="btn btn-primary">Submit</div>
@@ -39,80 +39,85 @@
 </template>
 
 <script>
-  import {getBlogDetail,modifyBlog} from "../../network/blog";
-  import { mavonEditor } from "mavon-editor";
-  import "mavon-editor/dist/css/index.css";
-  export default {
-    name: "BlogModifyPage",
-    data(){
-      return{
-        id:-1,
-        test:"hello",
-        blogData:{},
-        editorDoc:"",
-        modifyBlogTitle:"",
-        modifyBlogDesc:"",
-        modifyBlogHTMLContent:"",
-        modifyBlogTag:"",
-        modifyBlogCarousel:"",
-        modifyBlogMDContent:"",
-      }
-    },
-    methods:{
-      saveDoc(markdown, html) {
-        this.modifyBlogHTMLContent = html
-        this.modifyBlogMDContent = markdown
-        this.submittUpdate()
-      },
-      updateDoc(markdown, html) {
-        this.modifyBlogHTMLContent = html
-        this.modifyBlogMDContent = markdown
-      },
-      submittUpdate(){
-        this.blogData.blogTitle=this.modifyBlogTitle
-        this.blogData.blogDesc=this.modifyBlogDesc
-        this.blogData.blogCarousel=this.modifyBlogCarousel
-        this.blogData.blogTag=this.modifyBlogTag
-        this.blogData.blogHTMLContent=this.modifyBlogHTMLContent
-        this.blogData.blogMDContent=this.modifyBlogMDContent
-        modifyBlog(this.id,this.blogData).then(res=>{
-          console.log(res);
-        })
-      }
+import {getBlogDetail, modifyBlog} from "../../network/blog";
+import {mavonEditor} from "mavon-editor";
+import "mavon-editor/dist/css/index.css";
 
+export default {
+  name: "BlogModifyPage",
+  data() {
+    return {
+      id: -1,
+      test: "hello",
+      blogData: {},
+      editorDoc: "",
+      modifyBlogTitle: "",
+      modifyBlogDesc: "",
+      modifyBlogHTMLContent: "",
+      modifyBlogTag: "",
+      modifyBlogCarousel: "",
+      modifyBlogMDContent: "",
+    }
+  },
+  methods: {
+    saveDoc(markdown, html) {
+      this.modifyBlogHTMLContent = html
+      this.modifyBlogMDContent = markdown
+      this.submittUpdate()
     },
-    components:{
-      mavonEditor
+    updateDoc(markdown, html) {
+      this.modifyBlogHTMLContent = html
+      this.modifyBlogMDContent = markdown
     },
-    created() {
-      this.id=this.$route.params.id;
-      getBlogDetail(this.id).then(res=>{
-        console.log(res);
-        this.blogData=res;
-        this.modifyBlogTitle=this.blogData.blogTitle;
-          this.modifyBlogDesc=this.blogData.blogDesc;
-          this.modifyBlogHTMLContent=this.blogData.blogHTMLContent;
-          this.modifyBlogTag=this.blogData.blogTag;
-          this.modifyBlogCarousel=this.blogData.blogCarousel;
-          this.modifyBlogMDContent=this.blogData.blogMDContent;
+    submittUpdate() {
+      this.blogData.blogTitle = this.modifyBlogTitle
+      this.blogData.blogDesc = this.modifyBlogDesc
+      this.blogData.blogCarousel = this.modifyBlogCarousel
+      this.blogData.blogTag = this.modifyBlogTag
+      this.blogData.blogHTMLContent = this.modifyBlogHTMLContent
+      this.blogData.blogMDContent = this.modifyBlogMDContent
+      modifyBlog(this.id, this.blogData).then(res => {
+        alert(res);
+        this.$router.push('/manage/blog')
+
       })
     }
 
+  },
+  components: {
+    mavonEditor
+  },
+  created() {
+    this.id = this.$route.params.id;
+    getBlogDetail(this.id).then(res => {
+      console.log(res);
+      this.blogData = res;
+      this.modifyBlogTitle = this.blogData.blogTitle;
+      this.modifyBlogDesc = this.blogData.blogDesc;
+      this.modifyBlogHTMLContent = this.blogData.blogHTMLContent;
+      this.modifyBlogTag = this.blogData.blogTag;
+      this.modifyBlogCarousel = this.blogData.blogCarousel;
+      this.modifyBlogMDContent = this.blogData.blogMDContent;
+    })
   }
+
+}
 </script>
 
 <style scoped>
-  .main{
-    max-width: 750px;
-    margin: 100px auto;
-  }
-  .form{
-    background-color: rgb(36,36,36);
-    border-radius: 5px;
-    color: #eeeeee;
+.main {
+  max-width: 750px;
+  margin: 100px auto;
+}
 
-  }
-  .c-form{
-    padding: 30px;
-  }
+.form {
+  background-color: rgb(36, 36, 36);
+  border-radius: 5px;
+  color: #eeeeee;
+
+}
+
+.c-form {
+  padding: 30px;
+}
 </style>

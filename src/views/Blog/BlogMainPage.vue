@@ -4,7 +4,7 @@
       <div class="container">
         <h1 class="display-4">Blog</h1>
         <hr class="my-4">
-        <p class="lead">生活中的点滴记录</p>
+        <p class="lead">生活中的点滴记录。</p>
       </div>
     </div>
     <div class="container">

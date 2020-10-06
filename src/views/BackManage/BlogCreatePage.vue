@@ -83,8 +83,10 @@
           newBlogHTMLContent
         }
         createNewBlog(newBlogData).then(res => {
-          console.log(res);
-          this.$router.push("/manage/blog")
+          alert(res);
+
+            this.$router.push("/manage/blog")
+
         })
       },
       saveDoc(markdown, html) {
