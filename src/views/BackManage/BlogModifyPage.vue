@@ -90,7 +90,6 @@ export default {
   created() {
     this.id = this.$route.params.id;
     getBlogDetail(this.id).then(res => {
-      console.log(res);
       this.blogData = res;
       this.modifyBlogTitle = this.blogData.blogTitle;
       this.modifyBlogDesc = this.blogData.blogDesc;

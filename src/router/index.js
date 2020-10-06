@@ -14,7 +14,7 @@ const AlbumCreatePage =() => import("../views/BackManage/AlbumCreatePage")
 const AlbumManagePage =() => import("../views/BackManage/AlbumManagePage")
 const ImageCreatePage =() => import("../views/BackManage/ImageCreatePage")
 const AppsPage =() => import("../views/App/AppsPage")
-
+const LoginPage = () => import("../views/BackManage/LoginPage")
 const routes=[
   {
     path:"",
@@ -51,6 +51,10 @@ const routes=[
   {
     path:"/manage/blog/modify/:id",
     component:BlogModifyPage
+  },
+  {
+    path:"/manage/login",
+    component:LoginPage
   },
   {
     path:"/manage/album/create",
