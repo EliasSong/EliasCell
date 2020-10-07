@@ -2,7 +2,7 @@ import Vue from 'vue'
 import router from "./router";
 import App from './App.vue'
 import Waterfall from 'vue-waterfall2'
-
+import store from "@/storage";
 import $ from 'jquery'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -12,7 +12,10 @@ Vue.use(Waterfall)
 
 Vue.config.productionTip = false
 
+
+
 new Vue({
   render: h => h(App),
-  router
+  router,
+  store,
 }).$mount('#app')

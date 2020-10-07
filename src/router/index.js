@@ -46,14 +46,14 @@ const routes=[
   },
   {
     path:"/manage/blog",
-    component:BlogManagePage
+    component:BlogManagePage,
   },
   {
     path:"/manage/blog/modify/:id",
     component:BlogModifyPage
   },
   {
-    path:"/manage/login",
+    path:"/login",
     component:LoginPage
   },
   {
@@ -77,6 +77,22 @@ const routes=[
 const router = new Router({
   routes,
   mode:'history'
+})
+router.beforeEach((to,from,next)=>{
+  console.log(router.app.$options.store);
+  if(to.fullPath.indexOf('manage')!=-1){
+
+    if(sessionStorage.getItem('isAuth')){
+      next();
+    }
+    else{
+      next('/login')
+    }
+  }
+  else{
+    next();
+  }
+
 })
 
 export default router

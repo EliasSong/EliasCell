@@ -18,43 +18,46 @@
 </template>
 
 <script>
-  import {getToken} from "@/network/login";
+import {getToken} from "@/network/login";
 
-  export default {
-    name: "LoginPage",
-    data(){
-      return{
-        email:"",
-        password:""
+export default {
+  name: "LoginPage",
+  data() {
+    return {
+      email: "",
+      password: ""
+    }
+  },
+  methods: {
+    login() {
+      let email = this.email;
+      let password = this.password;
+      let user = {
+        email,
+        password,
       }
-    },
-    methods:{
-      login(){
-        let email=this.email;
-        let password=this.password;
-        let user={
-          email,
-          password,
-        }
-        getToken(user).then(res=>{
-          console.log(res);
-        })
-      }
+      getToken(user).then(res => {
+        this.$store.commit('userAuth', res);
+        alert(res);
+      })
     }
   }
+}
 </script>
 
 <style scoped>
-  .container{
-    background-color: rgb(36,36,36);
-    color: #eeeeee;
-    max-width: 750px;
-    margin-top: 250px;
-    width: 66%;
-    border-radius: 8px;
-  }
-  form{
-    padding: 30px 20px;
-    color: #eeeeee;
-  }
+.container {
+  background-color: rgb(36, 36, 36);
+  color: #eeeeee;
+  max-width: 500px;
+  margin-top: 250px;
+  width:100%;
+  border-radius: 8px;
+  padding: 20px 20px;
+}
+
+form {
+
+  color: #eeeeee;
+}
 </style>

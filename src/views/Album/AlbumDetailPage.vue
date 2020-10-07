@@ -49,7 +49,6 @@
     created() {
       this.id = this.$route.params.albumId
       getAlbumDetail(this.id).then(res => {
-        console.log(res);
         this.albumDetailData = res
       })
       console.log(document.body.clientWidth);

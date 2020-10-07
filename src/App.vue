@@ -12,6 +12,7 @@
 
 <script>
   import BlogNavbar from "./components/navbar";
+
   export default {
     name: 'App',
     data(){
