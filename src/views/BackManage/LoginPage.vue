@@ -39,6 +39,7 @@ export default {
       getToken(user).then(res => {
         this.$store.commit('userAuth', res);
         alert(res);
+        this.$router.push('/manage/blog');
       })
     }
   }
@@ -57,7 +58,6 @@ export default {
 }
 
 form {
-
   color: #eeeeee;
 }
 </style>

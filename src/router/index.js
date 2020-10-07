@@ -79,10 +79,9 @@ const router = new Router({
   mode:'history'
 })
 router.beforeEach((to,from,next)=>{
-  console.log(router.app.$options.store);
-  if(to.fullPath.indexOf('manage')!=-1){
 
-    if(sessionStorage.getItem('isAuth')){
+  if(to.fullPath.indexOf('manage')!==-1){
+    if(sessionStorage.getItem('isAuth')==="true"){
       next();
     }
     else{
