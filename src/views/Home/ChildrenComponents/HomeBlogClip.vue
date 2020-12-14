@@ -36,9 +36,7 @@
 
 <style scoped>
   .BlogClip{
-
     color: #ffffff;
-
     margin-bottom: 10px;
   }
   .card{

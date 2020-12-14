@@ -8,6 +8,8 @@
 </template>
 
 <script>
+  import $ from "jquery";
+
   export default {
     name: "HomeBlogClipItem",
     props:{
@@ -20,7 +22,9 @@
     },
     methods:{
       changeToBlogDetail(id){
+
         this.$router.push("/blog/"+id)
+        $("body,html").animate({scrollTop:0},10);
       }
     },
     created() {
