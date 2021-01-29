@@ -49,7 +49,7 @@
     methods:{
       pageChange(index){
         this.currentPage = index;
-        $("body,html").animate({scrollTop:0},0);
+        $("body,html").scrollTop(0);
       },
       pageControl(flag){
         if(flag === 1 && this.currentPage < this.blogSubPage.length - 1){
@@ -58,7 +58,7 @@
         else if(flag ===0 && this.currentPage > 0 ){
           this.currentPage -= 1;
         }
-        $("body,html").animate({scrollTop: 0}, 0);
+        $("body,html").scrollTop(0);
       }
     },
     created() {

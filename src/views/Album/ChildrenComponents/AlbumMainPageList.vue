@@ -2,15 +2,7 @@
   <div class="albumlist">
     <div class="card" v-for="(item,index) in albumMainPageList" :key="index">
       <h5 class="card-header">{{item.albumTitle}}<a class="more" @click="goToDetail(item._id)">Photos <i class="fas fa-angle-double-right"></i></a></h5>
-        <waterfall  class="list" :col="col"
-                   :data="item.albumImage">
-          <template>
-            <div v-for="(image, imageIdx) in item.albumImage.slice(0,10)" :key="imageIdx">
-              <img :src="image.imageURL" alt="loading" class="img-thumbnail" >
-            </div>
 
-          </template>
-        </waterfall>
 
 
     </div>

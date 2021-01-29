@@ -29,7 +29,7 @@ export default {
   methods: {
     blogDetailShow(id) {
       this.$router.push("/blog/" + id);
-      $("body,html").animate({scrollTop: 0}, 0);
+      $("body,html").scrollTop(0);
     }
   }
 }

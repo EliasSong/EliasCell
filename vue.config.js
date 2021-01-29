@@ -3,16 +3,14 @@ const webpack = require("webpack");
 module.exports = {
   productionSourceMap: false,
   configureWebpack: {
-    plugins: [
-      new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-        "window.jQuery": "jquery",
-        Popper: ["popper.js", "default"]
-      })
-    ]
+    externals: {
+      'jquery': '$',
+      'axios': 'axios'
+    },
+    // performance:{
+    //   "maxEntrypointSize": 10,
+    //   "maxAssetSize": 15
+    // }
   },
-
-
 };
 

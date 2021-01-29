@@ -24,7 +24,7 @@
       changeToBlogDetail(id){
 
         this.$router.push("/blog/"+id)
-        $("body,html").animate({scrollTop:0},10);
+        $("body,html").scrollTop(0);
       }
     },
     created() {

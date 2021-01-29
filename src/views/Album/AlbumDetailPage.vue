@@ -8,21 +8,21 @@
       </div>
     </div>
     <div class="container-fluid">
-      <waterfall id="fall" class="list" :col="col"
-                 :data="albumDetailData.albumImage" >
-        <template>
-          <div v-for="(item, index) in albumDetailData.albumImage" :key="index">
-            <div class="card">
-                <img :src="item.imageURL" alt="..." class="card-img-top img-thumbnail">
-              <div class="card-footer">
-                <p class="lead">{{item.imageTime}}</p>
-              </div>
-            </div>
+<!--      <waterfall id="fall" class="list" :col="col"-->
+<!--                 :data="albumDetailData.albumImage" >-->
+<!--        <template>-->
+<!--          <div v-for="(item, index) in albumDetailData.albumImage" :key="index">-->
+<!--            <div class="card">-->
+<!--                <img :src="item.imageURL" alt="..." class="card-img-top img-thumbnail">-->
+<!--              <div class="card-footer">-->
+<!--                <p class="lead">{{item.imageTime}}</p>-->
+<!--              </div>-->
+<!--            </div>-->
 
 
-          </div>
-        </template>
-      </waterfall>
+<!--          </div>-->
+<!--        </template>-->
+<!--      </waterfall>-->
     </div>
 
   </div>
