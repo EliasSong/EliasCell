@@ -4,8 +4,12 @@ module.exports = {
   productionSourceMap: false,
   configureWebpack: {
     externals: {
+      'vue-router':'VueRouter',
       'jquery': '$',
-      'axios': 'axios'
+      'axios': 'axios',
+      'vuex': 'Vuex',
+      'vue': 'Vue',
+
     },
     // performance:{
     //   "maxEntrypointSize": 10,
